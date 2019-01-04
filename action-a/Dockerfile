@@ -1,4 +1,4 @@
-FROM python:3.6.7-stretch
+FROM python:3.6.8-alpine
 
 LABEL "com.github.actions.name"="Hello World"
 LABEL "com.github.actions.description"="Write arguments to the standard output"
@@ -23,4 +23,4 @@ WORKDIR /src/
 
 COPY . /src/
 
-ENTRYPOINT ["/src/entrypoint.sh"]
+ENTRYPOINT [ "pytest" ]
