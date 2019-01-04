@@ -23,4 +23,4 @@ WORKDIR /src/
 
 COPY . /src/
 
-ENTRYPOINT [ "pytest" ]
+ENTRYPOINT [ "/src/entrypoint.sh" ]
