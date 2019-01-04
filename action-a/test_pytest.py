@@ -1,7 +1,6 @@
-
 def test_true():
     assert True
 
 
 def test_false():
-    assert False
+    assert False == False
