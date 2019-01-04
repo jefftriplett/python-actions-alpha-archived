@@ -9,5 +9,18 @@ LABEL "repository"="https://github.com/jefftriplett/python-actions"
 LABEL "homepage"="https://github.com/jefftriplett/python-actions"
 LABEL "maintainer"="Jeff Triplett <jeff.triplett@gmail.com>"
 
-ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+COPY requirements.txt /src/
+
+RUN pip install \
+    --no-cache-dir \
+    -r /src/requirements.txt \
+    && rm -rf /root/.cache/
+
+WORKDIR /src/
+
+COPY . /src/
+
+ENTRYPOINT ["/src/entrypoint.sh"]
