@@ -7,7 +7,7 @@ LABEL "com.github.actions.color"="blue"
 
 LABEL "repository"="https://github.com/jefftriplett/python-actions"
 LABEL "homepage"="https://github.com/jefftriplett/python-actions"
-LABEL "maintainer"="Jeff Triplett <jeff.triplett@gmail.com>"
+LABEL "maintainer"="Jeff Triplett <jeff.triplett@users.noreply.github.com>"
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
