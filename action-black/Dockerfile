@@ -26,3 +26,4 @@ WORKDIR /src/
 COPY . /src/
 
 ENTRYPOINT [ "/src/entrypoint.sh" ]
+CMD [ "--help" ]
