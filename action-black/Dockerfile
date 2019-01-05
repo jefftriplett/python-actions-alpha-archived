@@ -11,19 +11,18 @@ LABEL "com.github.actions.description"="Lint your Python code with Black"
 LABEL "com.github.actions.icon"="mic"
 LABEL "com.github.actions.color"="blue"
 
-
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-COPY requirements.txt /src/
+COPY requirements.txt /requirements.txt
 
 RUN pip install --no-cache-dir \
-        -r /src/requirements.txt && \
+        -r /requirements.txt && \
     rm -rf /root/.cache/
 
-WORKDIR /src/
+COPY entrypoint.sh /entrypoint.sh
 
-COPY . /src/
+WORKDIR /workspace
 
-ENTRYPOINT [ "/src/entrypoint.sh" ]
+ENTRYPOINT [ "/entrypoint.sh" ]
 CMD [ "--help" ]
