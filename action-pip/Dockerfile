@@ -8,7 +8,7 @@ LABEL "version"="1.0.0"
 
 LABEL "com.github.actions.name"="Python Action Pip"
 LABEL "com.github.actions.description"="Lint your Python code with Pip"
-LABEL "com.github.actions.icon"="mic"
+LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 
 
