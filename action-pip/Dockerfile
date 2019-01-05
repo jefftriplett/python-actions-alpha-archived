@@ -15,12 +15,6 @@ LABEL "com.github.actions.color"="blue"
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-# COPY requirements.txt /src/
-
-# RUN pip install --no-cache-dir \
-#         -r /src/requirements.txt && \
-#     rm -rf /root/.cache/
-
 WORKDIR /src/
 
 COPY . /src/
