@@ -2,7 +2,7 @@ include ../make/docker.mk
 include ../make/help.mk
 include ../make/shell.mk
 
-IMAGE_NAME=docker-action-hello-world
+IMAGE_NAME=python-action-pytest
 
 .PHONY: build
 build: docker-build ## Build this Action.

@@ -1,15 +1,15 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["Python Docker Action Black"]
+  resolves = ["Python Action Black"]
 }
 
-action "Hello World" {
-  uses = "./action-hello-world"
-  args = "Python"
+action "Python Action Pytest" {
+  uses = "./python-action-pytest"
+  args = "."
 }
 
-action "Python Docker Action Black" {
-  uses = "./action-black"
-  needs = ["Hello World"]
+action "Python Action Black" {
+  uses = "./python-action-black"
+  needs = ["Python Action Pytest"]
   args = "."
 }

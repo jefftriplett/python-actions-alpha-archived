@@ -1,3 +1,3 @@
-# README for action-a
+# python-action-black
 
 TODO: Testing
