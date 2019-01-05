@@ -4,6 +4,6 @@ workflow "New workflow" {
 }
 
 action "Hello World" {
-  uses = "./action-a"
+  uses = "./action-hello-world"
   args = "Python"
 }
