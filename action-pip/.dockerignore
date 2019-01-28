@@ -1,5 +1,0 @@
-*.md
-.git
-.gitignore
-.pytest_cache
-Dockerfile
