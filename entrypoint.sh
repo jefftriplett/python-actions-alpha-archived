@@ -2,10 +2,12 @@
 
 set -e
 
-if ! [ -e "${GITHUB_WORKSPACE}/venv/bin/activate" ]; then
-    python -m venv "${GITHUB_WORKSPACE}/venv/"
+VENV_NAME=${VENV_DIR:=venv}
+
+if ! [ -e "${GITHUB_WORKSPACE}/${VENV_NAME}" ]; then
+    python -m venv "${GITHUB_WORKSPACE}/${VENV_NAME}"
 fi
 
-source "${GITHUB_WORKSPACE}/venv/bin/activate"
+source "${GITHUB_WORKSPACE}/${VENV_NAME}/bin/activate"
 
 sh -c "$*"
